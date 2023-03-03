@@ -1,0 +1,133 @@
+:root {
+  --dark-grey: #1e2125;
+  --light-white: #eeeeee;
+  --light-white2: #fafafa;
+  --dark--blue: #38569f;
+  --dark-blue2: #38569f;
+  --light-blue: #17bed2;
+  --light-blue2: #4682b4;
+  --light-blue3: #4586FF;
+  --light-blue4: #00adb5;
+  --dark-yellow: #ff6600;
+  --light-yellow: #f9a743;
+  --dark-yellow2: #e6840e;
+  --light-green: #30be72;
+}
+
+.footer {
+  border-top: 1px solid #ededee;
+  padding: 3rem 0;
+}
+
+.footer__container {
+  padding-top: 44px;
+  display: flex;
+  justify-content: center;
+  gap: 0.6375rem;
+  color: #495057;
+  line-height: 128.571429%;
+}
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+justify-content: center;
+  row-gap: .3125rem;
+  column-gap: 1.5rem;
+
+}
+.menu__link {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dark-yellow2);
+  font-family: Roboto, sans-serif;
+align-items: center;
+text-align: center;
+justify-content: center;
+  line-height: 1.5;
+  position: relative;
+  padding-bottom: 1.875rem;
+}
+
+.menu__link.active {
+  color: var(--light-green);
+}
+
+.footer__text {
+  padding-left: 6.25rem;
+}
+
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.700rem;
+  }
+  
+  .social img {
+    width: 22px;
+  }
+  
+  .social__link {
+    background-color: #525861;
+    flex: 0 0 2.65rem;
+    height: 2.65rem;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease 0s;
+  }
+@media (max-width: 479.98px) {
+  .footer {
+    border-top: 1px solid #ededee;
+    padding: 5rem 0;
+  }
+  
+  
+  .footer__text {
+    padding-left: 2rem;
+    font-size: .800rem;
+    color: var(--light-white);
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.500rem;
+  }
+  
+  .social img {
+    width: 1.125rem;
+  }
+  
+  .social__link {
+    background-color: #525861;
+    flex: 0 0 2rem;
+    height: 2rem;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease 0s;
+  }
+}
+
+.social__link:hover {
+  background-color: var(--dark-yellow);
+  transform: scale(1.1);
+}
+
+.up {
+  width: 34px;
+  height: 34px;
+  position: fixed;
+  bottom: 60px;
+  right: 28px;
+  display: none;
+  z-index: 22;
+  cursor: pointer;
+  background: url(../resources/icons/nav/up.svg) 100%/100% no-repeat;
+  text-indent: -100vw;
+}

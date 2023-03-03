@@ -1,0 +1,350 @@
+:root {
+    --dark-grey: #1e2125;
+    --light-white: #eeeeee;
+    --light-white2: #fafafa;
+    --dark--blue: #38569f;
+    --dark-blue2: #38569f;
+    --light-blue: #17bed2;
+    --light-blue2: #4682b4;
+    --light-blue3: #4586FF;
+    --light-blue4: #00adb5;
+    --dark-yellow: #ff6600;
+    --light-yellow: #f9a743;
+    --dark-yellow2: #e6840e;
+    --light-green: #30be72;
+}
+
+/* -------------------------------- */
+.main-title {
+    transform: translate(100px, -2.875rem);
+    opacity: 0;
+}
+.loaded .main-title{
+    /* position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 3;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500; */
+
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: transform 1.2s ease, opacity 2s ease;
+}
+.video__play {
+    transform: translate(80px, 0px);
+    opacity: 0;
+}
+.loaded .video__play{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 3;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 500;
+
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: transform 1.2s ease, opacity 1.2s ease;
+}
+
+.video__container img {
+    opacity: 0;
+}
+.loaded .video__container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+
+    transform: translate(0, 0);
+    opacity: 0.7;
+    transition: transform 2s ease, opacity 2s ease;
+}
+.loaded .video__text {
+    text-align: center;
+    z-index: 3;
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+@media (max-width: 767.98px) {
+.video__text {
+    font-size: 2rem;
+}
+}
+.video__text p {
+    font-size: 14px;
+}
+.play-video{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.video__container {
+    min-height: 100vh;
+    min-width: 100vw;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    align-items: center; 
+     justify-content: center;
+}
+/* ------------------------------ */
+
+.related {
+    padding: 6.25rem 0;
+}
+
+.related__title {
+    margin-bottom: 2.8125rem;
+}
+
+.related__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(26.25rem, 1fr));
+    gap: 1.25rem;
+}
+
+.item-related {
+    border-radius: .3125rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.item-related__category {
+    position: absolute;
+    z-index: 3;
+    top: 1.25rem;
+    right: 1.25rem;
+}
+.related__container{
+    padding: 30px 0;
+}
+
+.item-related__content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    align-content: end;
+    color: #e5e5e5;
+    min-height: 21.875rem;
+    gap: .9375rem;
+    padding: 2.5rem;
+}
+
+.item-related__title {
+    color: #fff;
+    font-size: 1.125rem;
+    line-height: 138.888889%;
+    /* 25/18 */
+    font-weight: 700;
+}
+
+.item-related__title:hover {
+    text-decoration: underline;
+}
+
+.image-related__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+}
+
+.image-related__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: all 0.8s;
+    opacity: 0.7;
+}
+
+.item-related:hover .image-related__image img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 991.98px) {
+    .related {
+        padding: 4.375rem 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .related {
+        padding: 2.5rem 0;
+    }
+
+    .related__title {
+        margin-bottom: 1.5625rem;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .related__items {
+        grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+    }
+
+    .item-related__content {
+        padding: .9375rem;
+        min-height: 18.75rem;
+    }
+}
+
+/* --------------- */
+/* ------------------------------ */
+.article__content {
+    padding: 6.25rem 0;
+}
+
+.article__container {
+    display: grid;
+    align-items: start;
+    gap: 1.25rem;
+    grid-template-columns: 12.5rem 1fr 12.5rem;
+}
+
+.article__info {
+    display: flex;
+    gap: .4375rem;
+    align-items: center;
+    font-size: .75rem;
+    line-height: 208.333333%;
+    /* 25/12 */
+    font-weight: 700;
+}
+
+.article__body {
+    display: grid;
+    gap: 3.125rem;
+}
+
+.article__text {
+    padding-top: 4.5rem;
+    display: grid;
+    gap: 1.875rem;
+    line-height: 178.571429%;
+}
+
+.article__text p {
+    font-size: 26px;
+}
+
+@media (max-width: 767.98px) {
+    .article__text p {
+        padding-top: 2rem;
+        font-size: 1.25rem;
+    }
+}
+
+.article__text blockquote {
+    color: var(--dark-yellow);
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 127.777778%;
+    font-weight: 700;
+}
+
+.article__tags {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    border-bottom: 0.5px solid #c4c4c4;
+    padding-bottom: 3.125rem;
+}
+
+.article__tag:hover {
+    background-color: #e5e5e5;
+}
+
+.author {
+    display: flex;
+    gap: 1.0625rem;
+}
+
+.author__avatar {
+    flex: 0 0 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.author__avatar img {
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+.author__body {
+    display: grid;
+    align-self: center;
+    font-size: .75rem;
+    gap: .5rem;
+}
+
+.author__title {
+    color: var(--light-green);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.author__skills {
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+@media (max-width: 991.98px) {
+    .article__content {
+        padding: 4.375rem 0;
+    }
+
+    .article__container {
+        grid-template-columns: 12.5rem 1fr;
+    }
+
+    .article__body {
+        gap: 1.875rem;
+    }
+
+    .article__tags {
+        padding-top: 1.875rem;
+    }
+
+    .article__text {
+        gap: .9375rem;
+    }
+
+    .article__text blockquote {
+        font-size: 1.5625rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .article__content {
+        padding: 2.5rem 0;
+    }
+
+    .article__container {
+        grid-template-columns: auto;
+    }
+}
+
+.article__related {
+    background-color: rgba(229, 229, 229, 0.3);
+}
