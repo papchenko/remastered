@@ -101,27 +101,27 @@ function onLoadPage() {
 }
 
 // sticky header
-// var container = document.querySelector('.container');
-// var stickySidebar = document.querySelector('.sticky-header');
+var container = document.querySelector('.container');
+var stickySidebar = document.querySelector('.sticky-header');
 
-// document.addEventListener('scroll', function() {
-//   stickify(container, stickySidebar);
-// });
+document.addEventListener('scroll', function() {
+  stickify(container, stickySidebar);
+});
 
-// function stickify(wrapper, stickyEl) {
-//   var wrapperRect = wrapper.getBoundingClientRect();
-//   var stickyRect = stickyEl.getBoundingClientRect();
-//   var windowHeight = window.innerHeight;
+function stickify(wrapper, stickyEl) {
+  var wrapperRect = wrapper.getBoundingClientRect();
+  var stickyRect = stickyEl.getBoundingClientRect();
+  var windowHeight = window.innerHeight;
   
-//   if (wrapperRect.bottom < windowHeight) {
-//     stickyEl.classList.add('bottom');
-//   } else if (wrapperRect.top < 0) {
-//     stickyEl.classList.add('fixed');
-//   } else if (stickyRect.top <= wrapperRect.top) {
-//     stickyEl.classList.remove('fixed');
-//     stickyEl.classList.remove('bottom');
-//   }
-// }
+  if (wrapperRect.bottom < windowHeight) {
+    stickyEl.classList.add('bottom');
+  } else if (wrapperRect.top < 0) {
+    stickyEl.classList.add('fixed');
+  } else if (stickyRect.top <= wrapperRect.top) {
+    stickyEl.classList.remove('fixed');
+    stickyEl.classList.remove('bottom');
+  }
+}
 
 // glbox
 const lightbox = GLightbox({
@@ -129,53 +129,3 @@ const lightbox = GLightbox({
   loop: true,
   autoplayVideos: true
 });
-
-// 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-
-	ScrollSmoother.create({
-		wrapper: '.wrapper',
-		content: '.content',
-		smooth: 1.5,
-		effects: true
-	})
-
-	gsap.fromTo('.hero-section', { opacity: 1 }, {
-		opacity: 0,
-		scrollTrigger: {
-			trigger: '.hero-section',
-			start: 'center',
-			end: '820',
-			scrub: true
-		}
-	})
-
-	let itemsL = gsap.utils.toArray('.article__container')
-
-	itemsL.forEach(item => {
-		gsap.fromTo(item, { opacity: 0, x: -30 }, {
-			opacity: 1, x: 0,
-			scrollTrigger: {
-				trigger: item,
-				start: '-850',
-				end: '-100',
-				scrub: true
-			}
-		})
-	})
-
-  if (ScrollTrigger.isTouch !== 1) {
-	let itemsR = gsap.utils.toArray('.item-related')
-
-	itemsR.forEach(item => {
-		gsap.fromTo(item, { opacity: 0, x: 50 }, {
-			opacity: 1, x: 0,
-			scrollTrigger: {
-				trigger: item,
-				start: '-750',
-				end: 'top',
-				scrub: true
-			}
-		})
-	})
-}

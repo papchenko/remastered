@@ -23,13 +23,12 @@
 }
 .sticky-header {
     height: 7vh;
-    background-color: #ededee;
+    background-color: #7a828a07;
     left: 0;
     padding: 1em;
     position: absolute;
     width: 100%;
     z-index: 2;
-    border-bottom: 0.005rem solid #49505707;
   }
   .sticky-header.fixed {
     position: fixed;
