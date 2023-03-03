@@ -16,7 +16,7 @@
 
 /* -------------------------------- */
 .main-title {
-    transform: translate(100px, -2.875rem);
+    transform: translate(0, -1.875rem);
     opacity: 0;
 }
 .loaded .main-title{
@@ -300,12 +300,12 @@
 
 .author__title {
     color: var(--light-green);
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
 .author__skills {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-style: italic;
 }
 

@@ -30,13 +30,12 @@
     opacity: 0;
 }
 .loaded .gallery-title {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 500;
-    margin-bottom: 0.625rem;
+    /* margin-bottom: 0.625rem; */
     margin-top: 2.5rem;
-    margin-left: 3.125rem;
-    text-align: left;
-    color: #495057;
+    text-align: center;
+    /* color: #495057; */
 
     transform: translate(0, 0);
     opacity: 1;
@@ -97,15 +96,16 @@
 }
 
 .filter-articles__item {
-    font-size: 0.875rem;
+    font-size: 18px;
     line-height: 2;
-    color: #c4c4c4;
     transition: all 0.3s;
 }
 
 .filter-articles__item:hover,
 .filter-articles__item.active {
-    color: #495057;
+    color: var(--dark-yellow);
+    font-size: 1.375rem;
+    
 }
 
 .articles__items {
@@ -169,8 +169,8 @@
 }
 
 .article__link-title {
-    font-size: 1.125rem;
-    color: var(--dark--blue);
+    font-size: 20px;
+    color: var(--light-green);
     display: flex;
     justify-content: center;
     align-items: center;
